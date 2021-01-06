@@ -1,0 +1,10 @@
+
+$val: 12px;
+$globals: "padding";
+
+
+@each $global in $globals {
+	.#{$global} {
+		#{$global}: $val;
+	}
+}

@@ -1,0 +1,37 @@
+
+@use "sass:map";
+
+
+$colors: (
+	"black": #000,
+	"white": #fff,
+);
+
+
+body {
+	background: map.get($colors, "white");
+}
+
+@each $key, $value in $colors {
+	.#{$key} {
+		color: $value;
+	}
+}
+
+
+$paddings: "padding", "padding-top", "padding-left", "padding-bottom", "padding-right";
+$padding-sizes: (
+	"small": 1px,
+	"medium": 2px,
+	"large": 3px,
+);
+
+@each $padding in $paddings {
+	.#{$padding} {
+		@each $key, $value in $padding-sizes {
+			&-#{$key} {
+				#{$padding}: $value;
+			}
+		}
+	}
+}

@@ -1,0 +1,31 @@
+
+@use "sass:map";
+
+@mixin color($name, $default-color, $action-color) {
+	a.#{$name} {
+		color: $default-color;
+		&:hover {
+			color: $action-color;
+		}
+	}
+}
+
+@include color("red", #960, #b92);
+
+
+
+$colors: (
+	"black": #000,
+	"white": #fff,
+);
+
+@mixin color2($default, $action) {
+	a.#{$default} {
+		color: map.get($colors, $default);
+		&:hover {
+			color: map.get($colors, $action);
+		}
+	}
+}
+
+@include color2("black", "white");
