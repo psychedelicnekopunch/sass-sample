@@ -22,8 +22,10 @@ $colors: (
 @mixin color2($default, $action) {
 	a.#{$default} {
 		color: map.get($colors, $default);
+		// color: map-get($colors, $default);
 		&:hover {
 			color: map.get($colors, $action);
+			// color: map-get($colors, $default);
 		}
 	}
 }
