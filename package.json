@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/psychedelicnekopunch/sass-sample/issues"
   },
-  "homepage": "https://github.com/psychedelicnekopunch/sass-sample#readme"
+  "homepage": "https://github.com/psychedelicnekopunch/sass-sample#readme",
+  "dependencies": {
+    "sass": "^1.32.0"
+  }
 }
