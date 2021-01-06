@@ -1,0 +1,10 @@
+#!/bin/sh
+
+cd `dirname $0`
+d=`pwd`
+
+str=$1
+arr=($(echo $str | tr "." "\n"))
+
+echo "node_modules/.bin/sass ${arr[0]}.scss ${arr[0]}.css"
+$d/../node_modules/.bin/sass $d/../${arr[0]}.scss $d/../${arr[0]}.css
