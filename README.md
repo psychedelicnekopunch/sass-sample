@@ -21,5 +21,5 @@ $ bin/sass sample
 or
 
 ```bash
-$ ./node_modules/.bin/sass sample.scss sample.css
+$ node_modules/.bin/sass sample.scss sample.css
 ```
