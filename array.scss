@@ -1,6 +1,6 @@
 
 $val: 12px;
-$globals: "padding";
+$globals: "padding", "padding-top", "padding-left", "padding-bottom", "padding-right";
 
 
 @each $global in $globals {
