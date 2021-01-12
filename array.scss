@@ -1,10 +1,21 @@
 
+@use "sass:list";
+
 $val: 12px;
 $globals: "padding", "padding-top", "padding-left", "padding-bottom", "padding-right";
-
 
 @each $global in $globals {
 	.#{$global} {
 		#{$global}: $val;
+	}
+}
+
+$numbers: "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten";
+
+@each $number in $numbers {
+	$i: list.index($numbers, $number);
+	// $i: index($numbers, $number);
+	.#{$number} {
+		width: $i * 10%;
 	}
 }
