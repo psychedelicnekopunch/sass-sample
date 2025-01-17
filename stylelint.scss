@@ -1,0 +1,12 @@
+
+// $ npx stylelint stylelint.scss
+
+.some-class {
+	a {
+		color: #268;
+	}
+	& {
+		// Unexpected duplicate selector "&", first used   no-duplicate-selectors
+		color: #444;
+	}
+}
